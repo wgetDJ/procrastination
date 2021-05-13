@@ -84,7 +84,7 @@ body {
 
 .content .navigation .nav .leftNav,
 .content .navigation .nav .rightNav {
-    background-color: #111111;
+    background-color: #333333;
     padding: 10px 20px;
     border-radius: 5px;
 }
@@ -109,3 +109,9 @@ body {
 .content .navigation .nav .btn .text {
     line-height: 40px;
 }
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+  }
