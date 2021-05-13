@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+/* :root {
+    -black: #000000;
+    -white: #ffffff;
+} */
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: #111111;
+    color: white;
+}
+
+.container {
+    width: 380px;
+    margin: 0  auto;
+    background-color: black;
+    height: 100vh;
+}
+
+.content {
+    padding: 40px 20px;
+    height: calc(100% - 80px);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 20px;
+}
+
+.content .day {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: .01rem;
+}
+
+.content .quotes {
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .quotes .quote {
+    padding: 20px;
+    text-align: center;
+}
+
+.content .quotes .quote #quote {
+    font-weight: 500;
+    letter-spacing: .1rem;
+}
+
+.content .quotes .quote button {
+    padding: 7px 20px;
+    border-radius: 1rem;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+}
+
+.content .navigation h1 {
+    font-weight: 700;
+    letter-spacing: .01rem;
+    font-size: .9rem;
+    margin: 0;
+}
+
+.content .navigation .nav {
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.content .navigation .nav .leftNav,
+.content .navigation .nav .rightNav {
+    background-color: #111111;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.content .navigation .nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.content .navigation .nav .btn {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+    font-size: .8rem;
+}
+
+.content .navigation .nav .btn .image img {
+    width:40px;
+    height: auto;
+}
+
+.content .navigation .nav .btn .text {
+    line-height: 40px;
+}
