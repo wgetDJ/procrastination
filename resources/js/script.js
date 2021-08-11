@@ -57,7 +57,7 @@ const showPlanning = () => {
 
 planningBtn.addEventListener("click", showPlanning);
 
-const goHome = () => {
+const goPlanningToHome = () => {
     quote.style.display = "block";
     
     navigation.style.display = "block";
@@ -65,7 +65,7 @@ const goHome = () => {
     planning.style.display = "none";
 }
 
-planningBackBtn.addEventListener("click", goHome);
+planningBackBtn.addEventListener("click", goPlanningToHome);
 
 const displayTask = () => {
     const ul = document.querySelector(".tasks");
@@ -122,3 +122,35 @@ newTask.addEventListener("keypress", (event) => {
 
 // Focus
 const focusBtn = document.querySelector(".focusbtn");
+const focusDiv = document.querySelector(".focus");
+const musicCards = document.querySelectorAll(".music-card");
+const focusBackBtn = document.querySelector(".focusBack");
+
+const showFocus = () => {
+    quote.style.display = "none";
+    
+    navigation.style.display = "none";
+
+    focusDiv.style.display = "block";
+}
+
+focusBtn.addEventListener("click", showFocus);
+
+const goFocusToHome = () => {
+    quote.style.display = "block";
+    
+    navigation.style.display = "block";
+
+    focusDiv.style.display = "none";
+}
+
+focusBackBtn.addEventListener("click", goFocusToHome);
+
+const playPause = () => {
+    
+}
+
+for (let musicCard of musicCards) {
+    musicCard.addEventListener("click", playPause);
+}
+
