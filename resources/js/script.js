@@ -111,6 +111,14 @@ addBtn.addEventListener("click", () => {
     }
 });
 
+newTask.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        displayTask();
+        clearForm();
+    }
+});
+
 
 // Focus
 const focusBtn = document.querySelector(".focusbtn");
