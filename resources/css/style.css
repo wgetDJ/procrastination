@@ -1,23 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
 
-/* :root {
-    -black: #000000;
-    -white: #ffffff;
-} */
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #333333;
+}
 
 body {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 16px;
     margin: 0;
     padding: 0;
-    background-color: #111111;
-    color: white;
+    background-color: var(--black);
+    color: var(--white);
 }
 
 .container {
     width: 380px;
     margin: 0  auto;
-    background-color: black;
+    background-color: var(--black);
     height: 100vh;
 }
 
@@ -30,16 +31,19 @@ body {
 }
 
 .content .day {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: .01rem;
+    text-transform: lowercase;
 }
 
+
+/* Main Page */
 .content .quotes {
     padding: 20px;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 20px;
-    color: black;
+    color: var(--black);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -61,11 +65,12 @@ body {
     padding: 7px 20px;
     border-radius: 1rem;
     border: none;
-    background-color: black;
-    color: white;
+    background-color: var(--black);
+    color: var(--white);
     font-size: .7rem;
     font-weight: 600;
     letter-spacing: .1rem;
+    cursor: pointer;
 }
 
 .content .navigation h1 {
@@ -84,14 +89,14 @@ body {
 
 .content .navigation .nav .leftNav,
 .content .navigation .nav .rightNav {
-    background-color: #333333;
-    padding: 10px 20px;
+    background-color: var(--gray);
+    padding: 10px 10px 5px 10px;
     border-radius: 5px;
 }
 
 .content .navigation .nav a {
     text-decoration: none;
-    color: white;
+    color: var(--white);
 }
 
 .content .navigation .nav .btn {
@@ -114,4 +119,70 @@ body {
     .container {
         width: 100%;
     }
-  }
+    .planning .inputItem {
+        width: calc(100vw - 75px);
+    }
+}
+
+
+/* .content .quotes,
+.content .navigation {
+    display: none;
+} */
+
+
+/* Planning page */
+.planning {
+    display: none;
+}
+.planning .planningBack {
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    font-size: 1.3rem;
+    padding: .5rem 2rem .5rem 0;
+    cursor: pointer;
+}
+
+.planning .tasks {
+    padding: 0;
+    list-style: none;
+}
+.planning .tasks li {
+    background-color: var(--gray);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+.planning .tasks li span {
+    float: right;
+    cursor: pointer;
+}
+
+.planning .inputItem {
+    padding: 1.3rem 1rem 0 1rem;
+    border-radius: 5px;
+    background-color: var(--gray);
+    box-shadow: rgb(15 15 15 / 20%) 0px 0px 0px 1px, rgb(15 15 15 / 20%) 0px 2px 4px;
+}
+.planning .inputItem #task {
+    background-color: var(--gray);
+    border: none;
+    border-bottom: 2px solid var(--white);
+    padding: 10px;
+    margin-bottom: 1rem;
+    width: calc(100% - 100px);
+    color: var(--white);
+}
+.planning .inputItem #task:focus {
+    outline: none;
+}
+.planning .inputItem .addItem {
+    float: right;
+    background-color: var(--white);
+    color: var(--gray);
+    border: none;
+    padding: .7rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
