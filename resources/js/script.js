@@ -100,6 +100,9 @@ const deleteTask = (e) => {
 
 let allTasks = document.querySelector(".tasks");
 allTasks.addEventListener("click", deleteTask);
+allTasks.addEventListener("click", (e) => {
+    e.target.classList.toggle("donetask");
+});
 
 addBtn.addEventListener("click", () => {
     let inputValue = newTask.value;
@@ -147,12 +150,12 @@ const goFocusToHome = () => {
 focusBackBtn.addEventListener("click", goFocusToHome);
 
 
-let rainAudio = new Audio("../resources/sounds/rain.mp3");
-let oceanAudio = new Audio("../resources/sounds/beach.mp3");
-let natureAudio = new Audio("../resources/sounds/nature.mp3");
-let cafeAudio = new Audio("../resources/sounds/cafe.mp3");
-let fluteAudio = new Audio("../resources/sounds/flute.mp3");
-let pianoAudio = new Audio("../resources/sounds/piano.mp3");
+let rainAudio = new Audio("resources/sounds/rain.mp3");
+let oceanAudio = new Audio("resources/sounds/beach.mp3");
+let natureAudio = new Audio("resources/sounds/nature.mp3");
+let cafeAudio = new Audio("resources/sounds/cafe.mp3");
+let fluteAudio = new Audio("resources/sounds/flute.mp3");
+let pianoAudio = new Audio("resources/sounds/piano.mp3");
 
 const allSounds = [rainAudio, oceanAudio, natureAudio, cafeAudio, fluteAudio, pianoAudio];
 

@@ -152,10 +152,14 @@ body {
     padding: 1rem;
     border-radius: 5px;
     margin-bottom: 1rem;
+    cursor: pointer;
 }
 .planning .tasks li span {
     float: right;
     cursor: pointer;
+}
+.donetask {
+    color: var(--menthol);
 }
 
 .planning .inputItem {
