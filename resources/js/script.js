@@ -146,8 +146,66 @@ const goFocusToHome = () => {
 
 focusBackBtn.addEventListener("click", goFocusToHome);
 
-const playPause = () => {
-    
+
+let rainAudio = new Audio("../resources/sounds/rain.mp3");
+let oceanAudio = new Audio("../resources/sounds/beach.mp3");
+let natureAudio = new Audio("../resources/sounds/nature.mp3");
+let cafeAudio = new Audio("../resources/sounds/cafe.mp3");
+let fluteAudio = new Audio("../resources/sounds/flute.mp3");
+let pianoAudio = new Audio("../resources/sounds/piano.mp3");
+
+const allSounds = [rainAudio, oceanAudio, natureAudio, cafeAudio, fluteAudio, pianoAudio];
+
+// const oneTrack = (trackToPlay) => {
+//     for (let track of allSounds) {
+//         if(track = trackToPlay) {
+//             track.play();
+//             track.loop = true;
+//         } else {
+//             track.pause();
+//         }
+//     }
+// }
+
+const oneTrack = (trackToPlay, sound) => {
+    if (trackToPlay.paused) {
+        trackToPlay.play();
+    } else {
+        trackToPlay.pause();
+        sound.classList.remove("active");
+    }
+    for (let track of allSounds) {
+        if (trackToPlay != track) {
+            track.pause();
+        }
+    }
+    // for (let track of allSounds) {
+    //     if(track = trackToPlay) {
+    //         track.play();
+    //         track.loop = true;
+    //     } else {
+    //         track.pause();
+    //     }
+    // }
+}
+
+const playPause = (e) => {
+    const sound = e.target;
+    sound.classList.toggle("active");
+    console.log(sound);
+    if (sound.classList[1] == "rain") {
+        oneTrack(rainAudio, sound);
+    } else if (sound.classList[1] == "ocean") {
+        oneTrack(oceanAudio, sound);
+    } else if (sound.classList[1] == "nature") {
+        oneTrack(natureAudio, sound);
+    } else if (sound.classList[1] == "cafe") {
+        oneTrack(cafeAudio, sound);
+    } else if (sound.classList[1] == "flute") {
+        oneTrack(fluteAudio, sound);
+    } else if (sound.classList[1] == "piano") {
+        oneTrack(pianoAudio, sound);
+    }
 }
 
 for (let musicCard of musicCards) {

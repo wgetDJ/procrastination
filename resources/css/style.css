@@ -4,7 +4,7 @@
     --black: #000000;
     --white: #ffffff;
     --gray: #333333;
-    --pale-blue: #B5F2F3;
+    --menthol: #C7E4A7;
 }
 
 body {
@@ -46,8 +46,6 @@ body {
     border-radius: 20px;
     color: var(--black);
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -204,10 +202,11 @@ body {
     font-size: 1.3rem;
     padding: .5rem 2rem .5rem 0;
     cursor: pointer;
+    margin-bottom: 1rem;
 }
 .focus-data div {
     background-color: var(--gray);
-    height: 150px;
+    height: 140px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -218,5 +217,5 @@ body {
     cursor: pointer;
 }
 .active {
-    color: var(--pale-blue);
+    color: var(--menthol);
 }
