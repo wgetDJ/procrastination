@@ -156,43 +156,23 @@ let pianoAudio = new Audio("../resources/sounds/piano.mp3");
 
 const allSounds = [rainAudio, oceanAudio, natureAudio, cafeAudio, fluteAudio, pianoAudio];
 
-// const oneTrack = (trackToPlay) => {
-//     for (let track of allSounds) {
-//         if(track = trackToPlay) {
-//             track.play();
-//             track.loop = true;
-//         } else {
-//             track.pause();
-//         }
-//     }
-// }
-
 const oneTrack = (trackToPlay, sound) => {
     if (trackToPlay.paused) {
         trackToPlay.play();
     } else {
         trackToPlay.pause();
-        sound.classList.remove("active");
     }
     for (let track of allSounds) {
         if (trackToPlay != track) {
             track.pause();
         }
     }
-    // for (let track of allSounds) {
-    //     if(track = trackToPlay) {
-    //         track.play();
-    //         track.loop = true;
-    //     } else {
-    //         track.pause();
-    //     }
-    // }
 }
 
 const playPause = (e) => {
     const sound = e.target;
     sound.classList.toggle("active");
-    console.log(sound);
+    
     if (sound.classList[1] == "rain") {
         oneTrack(rainAudio, sound);
     } else if (sound.classList[1] == "ocean") {
