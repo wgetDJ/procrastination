@@ -4,9 +4,15 @@
         <title>Procrastination</title>
         <meta charset="UTF-8">
 	    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta name="description" content="This is the personal website of Dibyajyoti Mishra"/>
+        <meta name="keywords" content="HTML, CSS, JavaScript, Developer, Bangalore, India, Graphics Designer, Frontend developer">
+        <meta name="author" content="Dibyajyoti Mishra">
+        <meta name="theme-color" content="#000000">
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" href="./resources/css/style.css" type="text/css" />
+
+        <link rel="manifest" href="manifest.json">
     </head>
 
     <body>
@@ -85,5 +91,20 @@
         </div>
 
         <script src="./resources/js/script.js"></script>
+
+        <!-- Service worker -->
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                        // Registration was successful
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    }, function(err) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+                });
+            }
+        </script>
     </body>
 </html>
