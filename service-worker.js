@@ -3,5 +3,5 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.1.5/workbox
 // This will work!
 workbox.routing.registerRoute(
   ({request}) => request.destination === 'image',
-  new workbox.strategies.CacheFirst()
+  new workbox.strategies.NeteorkFirst()
 );
